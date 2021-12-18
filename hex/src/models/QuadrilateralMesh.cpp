@@ -13,7 +13,7 @@ bool QuadrilateralMesh::IntersectWithRay(const Ray& ray, HitRecord& record) {
   bool success = false;
   float min_t = std::numeric_limits<float>::max();
 #pragma omp parallel for
-  for (size_t i = 0; i < quads_.size(); i++) {
+  for (long long i = 0; i < quads_.size(); i++) {
     auto& quad = quads_[i];
     auto& v0 = vertices_[quad[0]];
     auto& v1 = vertices_[quad[1]];

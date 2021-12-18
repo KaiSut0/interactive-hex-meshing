@@ -381,7 +381,7 @@ void HexComplexDeformer::PrepareCustomLoss() {
         X = GetMaskedX();
       } else {
         assert(options_.mode == Mode::Projection ||
-               options_.mode == Mode::Riemannian);
+               options_.mode == Mode::LiftedProjection);
         X = X_;
       }
 

@@ -21,6 +21,10 @@ find_package(Vulkan REQUIRED)
 # OpenMP
 find_package(OpenMP REQUIRED)
 
+# hdf5
+# cd find_package(HDF5 COMPONENTS CXX REQUIRED)
+
+
 if (NOT CMAKE_BUILD_TYPE)
     message(STATUS "No build type selected; default to release.")
     set(CMAKE_BUILD_TYPE "Release")

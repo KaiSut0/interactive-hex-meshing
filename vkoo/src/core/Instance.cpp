@@ -10,7 +10,7 @@ DebugCallback(VkDebugUtilsMessageSeverityFlagBitsEXT message_severity,
               const VkDebugUtilsMessengerCallbackDataEXT* p_callback_data,
               void* pUserData) {
   std::cerr << "Validation layer: " << p_callback_data->pMessage << std::endl;
-  throw std::runtime_error("Ugh!");
+  //throw std::runtime_error("Ugh!");
 
   return VK_FALSE;
 }

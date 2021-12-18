@@ -25,7 +25,7 @@
 namespace hex {
 HexMeshingApp::HexMeshingApp(bool enable_validation_layer)
     : Application(enable_validation_layer),
-      settings_{PathManager::GetWorkspacePath() / "config.yml", 60} {
+      settings_{(PathManager::GetWorkspacePath() / "config.yml").string(), 60} {
   torch::manual_seed(42);
   starter_width_ = settings_.window_width;
   starter_height_ = settings_.window_height;

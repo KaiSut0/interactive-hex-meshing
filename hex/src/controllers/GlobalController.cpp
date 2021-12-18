@@ -205,10 +205,10 @@ void GlobalController::DrawMainMenuBar() {
         global_state_ = GlobalState::LoadFromFile(selected_file);
         RebuildViewsAndStages();
         project_name_ = fs::path(selected_file).filename().string();
-        last_visited_path_ = fs::path(selected_file).parent_path();
+        last_visited_path_ = fs::path(selected_file).parent_path().string();
       } else if (file_op == "save") {
         global_state_->SaveToFile(selected_file);
-        last_visited_path_ = fs::path(selected_file).parent_path();
+        last_visited_path_ = fs::path(selected_file).parent_path().string();
       } else if (file_op == "import") {
         global_state_ = std::make_unique<GlobalState>();
         RebuildViewsAndStages();

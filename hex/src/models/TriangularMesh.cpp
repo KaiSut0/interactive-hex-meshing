@@ -54,7 +54,7 @@ bool TriangularMesh::IntersectWithRay(const Ray& ray, HitRecord& record) const {
   auto& vertices = GetVertices();
   auto& faces = GetFaces();
 #pragma omp parallel for
-  for (size_t i = 0; i < faces.rows(); i++) {
+  for (long long i = 0; i < faces.rows(); i++) {
     Vector3f v0 = vertices.row(faces(i, 0));
     Vector3f v1 = vertices.row(faces(i, 1));
     Vector3f v2 = vertices.row(faces(i, 2));
