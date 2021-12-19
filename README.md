@@ -1,4 +1,4 @@
-# Interactive All-Hex Meshing via Cuboid Decomposition
+﻿# Interactive All-Hex Meshing via Cuboid Decomposition
 
 ![teaser](https://user-images.githubusercontent.com/38452438/144882120-359ea450-03f8-4267-93f4-6a78f9ffff80.png)
 **[Video demonstration](https://www.dropbox.com/s/v687elfwgjnzfx4/demo.mp4?dl=0)**
@@ -74,3 +74,18 @@ Compiling on Windows is trickier than on Linux. The following procedure has been
 - Download and install HDF5 for Windows
 - In VS2019, install CMake tools, and then build the project following [this](https://docs.microsoft.com/en-us/cpp/build/cmake-projects-in-visual-studio?view=msvc-160)
 This should generate an executable under `bin/Debug` or `bin/Release`.
+
+
+## 追記
+
+再現が確認されたバージョン
+- VisualStudio2019
+- CMake tools (VS2019内でインストール)
+- CUDA Toolkit 11.2
+- cuDNN for Windows 11.3
+- Vulkan SDK-1.2.198.1
+- Python3.9
+- Pytorch 1.8.0 (CUDA 11.1)
+	- pip でインストール
+	- "C:\Python39\Lib\site-packages\torch\share\cmake\Torch" を"Torch_DIR"としてWinの環境変数に追加
+- HDF5 1.12.1
